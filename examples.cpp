@@ -17,28 +17,27 @@ void pointers() {
   std::cout << "ptr2: " << *ptr << std::endl;
 }
 
+void loops() {
+  int count = 0;
+  while (count <= 4) {
+    std::cout << count;
+    count++;
+  }
+
+  int fibonacci[6] = {0, 1, 1, 2, 3, 5};
+  for (auto number : fibonacci) {
+    std::cout << number << ", ";
+  }
+}
+
 int main() {
 
-  std::string first_name, last_name, message;
+  std::string greetings = (5 > 0) ? "True Greetings" : "False Greetings";
 
-  const double pi = 3.14;
-  bool is_ready = false;
-
-  // std::cout << "Type your first name: ";
-  // std::cin >> first_name;
-  //
-  // std::cout << "Type your last name: ";
-  // std::cin >> last_name;
-  //
-  // message = "Hello, " + std::to_string(pi) + " ?? " + first_name + " " +
-  //           last_name + "!\n";
-  //
-  // std::cout << message << " length: " << message.length() << "\nis ready - "
-  //           << is_ready << "\n";
-  //
-  // std::cout << &message << std::endl;
+  std::cout << greetings << std::endl;
 
   pointers();
+  loops();
 
   return 0;
 }
